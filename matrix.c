@@ -147,3 +147,11 @@ void add_column_combination(matrix *src, unsigned target, unsigned column_to_add
         src->data[i][target] += factor * src->data[i][column_to_add];
     }
 }
+
+unsigned matrix_columns(matrix *mat) {
+    return mat->n;
+}
+
+unsigned matrix_rows(matrix *mat) {
+    return mat->m;
+}

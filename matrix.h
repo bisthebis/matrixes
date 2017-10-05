@@ -26,6 +26,8 @@ SOFTWARE.
 
 typedef struct matrix matrix;
 matrix* new_matrix(unsigned rows, unsigned columns);
+unsigned matrix_rows(matrix* mat);
+unsigned matrix_columns(matrix* mat);
 void delete_matrix(matrix* src);
 void print_matrix(matrix* src);
 //swapping row is in constant time, swapping column is linear to rows number
@@ -37,5 +39,8 @@ void set(matrix* src, unsigned i, unsigned j, double value);
 double get(matrix* src, unsigned i, unsigned j);
 void add_row_combination(matrix* src, unsigned target, unsigned row_to_add, double factor);
 void add_column_combination(matrix* src, unsigned target, unsigned row_to_add, double factor);
+
+//Defined in matrix_deuction.c
+void matrix_row_reduce(matrix* mat);
 
 #endif // MATRIX_H
