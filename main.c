@@ -23,6 +23,16 @@ int main()
 
     printf("\nOperating... \n");
 
+    add_row_combination(mat, 2, 1, -1.0/3);
+    add_row_combination(mat, 3, 1, -8.0/3);
+    multiply_row(mat, 1, 1.0/3);
+    multiply_row(mat, 2, 1.0/get(mat, 2, 2));
+    add_row_combination(mat, 1, 2, -get(mat, 1, 2));
+    add_row_combination(mat, 3, 2, -get(mat, 3, 2));
+
+
+    print_matrix(mat);
+
     delete_matrix(mat);
 
     return 0;
