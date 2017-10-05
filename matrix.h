@@ -35,5 +35,7 @@ void multiply_row(matrix* src, unsigned i, double factor);
 void multiply_column(matrix* src, unsigned j, double factor);
 void set(matrix* src, unsigned i, unsigned j, double value);
 double get(matrix* src, unsigned i, unsigned j);
+void add_row_combination(matrix* src, unsigned target, unsigned row_to_add, double factor);
+void add_column_combination(matrix* src, unsigned target, unsigned row_to_add, double factor);
 
 #endif // MATRIX_H

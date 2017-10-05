@@ -129,3 +129,21 @@ double get(matrix *src, unsigned i, unsigned j) {
 
     return src->data[i][j];
 }
+
+void add_row_combination(matrix *src, unsigned target, unsigned row_to_add, double factor) {
+    assert(target <= src->m && row_to_add <= src->m);
+    assert(target-- > 0 && row_to_add-- > 0);
+
+    for (unsigned j = 0; j < src->n; ++j) {
+        src->data[target][j] += factor * src->data[row_to_add][j];
+    }
+}
+
+void add_column_combination(matrix *src, unsigned target, unsigned column_to_add, double factor) {
+    assert(target <= src->n && column_to_add <= src->n);
+    assert(target-- > 0 && column_to_add-- > 0);
+
+    for (unsigned i = 0; i < src->m; ++i) {
+        src->data[i][target] += factor * src->data[i][column_to_add];
+    }
+}

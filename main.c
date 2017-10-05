@@ -11,8 +11,8 @@ int main()
 
 
     print_matrix(mat);
-    printf("Swapping \n");
-    set(mat, 1, 2, 2.5);
+    printf("Operating \n");
+    add_row_combination(mat, 2, 3, -2.5);
     print_matrix(mat);
 
     delete_matrix(mat);
